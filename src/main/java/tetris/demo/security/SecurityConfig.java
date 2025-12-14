@@ -43,9 +43,11 @@ public class SecurityConfig {
     @Bean
     public UrlBasedCorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        config.addAllowedOrigin("http://localhost:5173"); // 這是 Vue 的預設 Port
+        config.addAllowedOrigin("http://localhost:5173"); // 本機開發用
+        config.addAllowedOrigin("https://uie47061-tetris.hf.space"); // Hugging Face Space
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
+        config.setAllowCredentials(true); // 允許發送憑證（如 Cookie）
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", config);
         return source;
