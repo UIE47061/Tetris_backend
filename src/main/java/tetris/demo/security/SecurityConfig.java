@@ -44,7 +44,7 @@ public class SecurityConfig {
     public UrlBasedCorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
         config.addAllowedOrigin("http://localhost:5173"); // 本機開發用
-        config.addAllowedOrigin("https://uie47061-tetris.hf.space"); // Hugging Face Space
+        config.addAllowedOrigin("https://uie47061.github.io"); // GitHub Pages
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
         config.setAllowCredentials(true); // 允許發送憑證（如 Cookie）
