@@ -44,3 +44,4 @@ jobs:
           # 推送到 Hugging Face
           git remote add space https://user:$HF_TOKEN@huggingface.co/spaces/$HF_SPACE_ID
           git push space main:main --force
+          
