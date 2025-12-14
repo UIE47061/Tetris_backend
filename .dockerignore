@@ -1,0 +1,42 @@
+# Maven
+target/
+.mvn/wrapper/maven-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentation
+README.md
+README_HF.md
+HELP.md
+*.md
+
+# Environment files (不要打包進映像，使用環境變數)
+.env
+.env.*
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test files
+src/test/
+
+# Temporary files
+*.tmp
+*.swp
+*~
