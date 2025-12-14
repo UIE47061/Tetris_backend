@@ -39,7 +39,8 @@ public class AuthController {
             String token = jwtUtil.generateToken(user.getUsername());
             return ResponseEntity.ok(Map.of(
                 "token", token,
-                "username", user.getUsername()
+                "username", user.getUsername(),
+                "lastLogin", user.getLastLogin() != null ? user.getLastLogin().toString() : null
             ));
         }
         return ResponseEntity.status(401).body("帳號或密碼錯誤");

@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface RecordRepository extends JpaRepository<TetrisRecord, Long> {
     List<TetrisRecord> findTop10ByOrderByScoreDesc();
+    List<TetrisRecord> findByUsernameOrderByScoreDesc(String username);
 }

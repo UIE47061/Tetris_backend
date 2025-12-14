@@ -17,10 +17,21 @@ public class TetrisRecord {
     private Integer level;
     private Integer duration;
 
+    @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
     @PrePersist
     protected void onCreate() {
-        createdAt = LocalDateTime.now();
+        if (createdAt == null) {
+            createdAt = LocalDateTime.now();
+        }
+    }
+    
+    @PostLoad
+    protected void onLoad() {
+        // 確保舊資料也有 createdAt 值
+        if (createdAt == null) {
+            createdAt = LocalDateTime.now();
+        }
     }
 }
