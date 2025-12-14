@@ -5,10 +5,10 @@ on:
     branches:
       - main
 
-    paths:
-      - 'Tetris_backend/**' 
-      - 'Dockerfile'
-      - '.github/workflows/deploy.yml'
+    # paths:
+    #   - 'Tetris_backend/**' 
+    #   - 'Dockerfile'
+    #   - '.github/workflows/deploy.yml'
 
 jobs:
   deploy:
